@@ -26,7 +26,12 @@ class Quotes extends Component {
                   {/* <QuoteCard quote={quote}/> */}
                 {/* </li> */}
                {/* ))} */}
-               
+               {/* {this.props.quotes.map((quote, index) => (
+                <li key={index}>
+                  {quote.content}
+                  <QuoteCard quote={quote}/>
+                </li> 
+               ))} */}
             </div>
           </div>
         </div>

@@ -53,57 +53,57 @@ describe('Quotes Reducer', () => {
     ]);
   });
 
-  it("should handle UPVOTE_QUOTE", () => {
-    const firstId = uuid();
-    const initialState = [
-      {
-        id: firstId,
-        content: 'Moral indignation is jealousy with a halo.',
-        author: 'H.G. Wells',
-        votes: 0
-      }
-    ];
+  // it("should handle UPVOTE_QUOTE", () => {
+  //   const firstId = uuid();
+  //   const initialState = [
+  //     {
+  //       id: firstId,
+  //       content: 'Moral indignation is jealousy with a halo.',
+  //       author: 'H.G. Wells',
+  //       votes: 0
+  //     }
+  //   ];
 
-    expect(reducer(initialState, {
-      type: 'UPVOTE_QUOTE',
-      quoteId: firstId
-    })).to.deep.equal(
-      [
-        {
-          id: firstId,
-          content: 'Moral indignation is jealousy with a halo.',
-          author: 'H.G. Wells',
-          votes: 1
-        }
-      ]
-    );
-  });
+  //   expect(reducer(initialState, {
+  //     type: 'UPVOTE_QUOTE',
+  //     quoteId: firstId
+  //   })).to.deep.equal(
+  //     [
+  //       {
+  //         id: firstId,
+  //         content: 'Moral indignation is jealousy with a halo.',
+  //         author: 'H.G. Wells',
+  //         votes: 1
+  //       }
+  //     ]
+  //   );
+  // });
 
-  it("should handle DOWNVOTE_QUOTE and decrement vote count down 1 if vote count is positive", () => {
-    const firstId = uuid();
-    const initialState = [
-      {
-        id: firstId,
-        content: 'Moral indignation is jealousy with a halo.',
-        author: 'H.G. Wells',
-        votes: 3
-      }
-    ];
+  // it("should handle DOWNVOTE_QUOTE and decrement vote count down 1 if vote count is positive", () => {
+  //   const firstId = uuid();
+  //   const initialState = [
+  //     {
+  //       id: firstId,
+  //       content: 'Moral indignation is jealousy with a halo.',
+  //       author: 'H.G. Wells',
+  //       votes: 3
+  //     }
+  //   ];
 
-    expect(reducer(initialState, {
-      type: 'DOWNVOTE_QUOTE',
-      quoteId: firstId
-    })).to.deep.equal(
-      [
-        {
-          id: firstId,
-          content: 'Moral indignation is jealousy with a halo.',
-          author: 'H.G. Wells',
-          votes: 2
-        }
-      ]
-    );
-  });
+  //   expect(reducer(initialState, {
+  //     type: 'DOWNVOTE_QUOTE',
+  //     quoteId: firstId
+  //   })).to.deep.equal(
+  //     [
+  //       {
+  //         id: firstId,
+  //         content: 'Moral indignation is jealousy with a halo.',
+  //         author: 'H.G. Wells',
+  //         votes: 2
+  //       }
+  //     ]
+  //   );
+  // });
 
   it("should handle DOWNVOTE_QUOTE and do nothing if vote count is 0", () => {
     const firstId = uuid();
